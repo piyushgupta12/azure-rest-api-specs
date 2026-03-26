@@ -21875,6 +21875,115 @@ model ConnectionMonitorEndpointLocationDetails {
 }
 
 /**
+ * Parameters that define the query for connection monitors.
+ */
+#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+@Azure.ResourceManager.Legacy.feature(Features.networkWatcher)
+model ConnectionMonitorsQueryParameters {
+  /**
+   * The list of VMs or VNets resource IDs to query.
+   */
+  @encodedName("application/json", "resourceIDs")
+  resourceIds: string[];
+
+  /**
+   * The poll time in hours for the query.
+   */
+  pollTimeInHours?: int32;
+
+  /**
+   * Whether to include inferred connections.
+   */
+  includeInferred?: boolean;
+}
+
+/**
+ * List of connection monitor query result items.
+ */
+#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+@Azure.ResourceManager.Legacy.feature(Features.networkWatcher)
+model ConnectionMonitorsQueryResult {
+  /**
+   * The list of connection monitor query result items.
+   */
+  #suppress "@azure-tools/typespec-azure-resource-manager/missing-x-ms-identifiers" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+  value?: ConnectionMonitorsQueryResultItem[];
+}
+
+/**
+ * A connection monitor query result item.
+ */
+#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+@Azure.ResourceManager.Legacy.feature(Features.networkWatcher)
+model ConnectionMonitorsQueryResultItem {
+  /**
+   * The resource ID.
+   */
+  resourceId?: string;
+
+  /**
+   * The connection monitor resource ID.
+   */
+  connectionMonitorResourceId?: string;
+
+  /**
+   * The workspace resource ID.
+   */
+  workspaceResourceId?: string;
+
+  /**
+   * The inferred resource ID.
+   */
+  inferredResourceId?: string;
+
+  /**
+   * The observed resource ID.
+   */
+  observedResourceId?: string;
+
+  /**
+   * Whether the resource is monitored.
+   */
+  isMonitored?: boolean;
+
+  /**
+   * The participation type.
+   */
+  participation?: string;
+
+  /**
+   * The source name.
+   */
+  sourceName?: string;
+
+  /**
+   * The destination name.
+   */
+  destinationName?: string;
+
+  /**
+   * The test group name.
+   */
+  testGroupName?: string;
+
+  /**
+   * The test configuration name.
+   */
+  testConfigurationName?: string;
+
+  /**
+   * The test status.
+   */
+  testStatus?: string;
+
+  /**
+   * The last updated date and time in UTC.
+   */
+  // FIXME: (utcDateTime) Please double check that this is the correct type for your scenario.
+  lastUpdatedUtc?: utcDateTime;
+}
+
+/**
  * Describes a connection monitor test configuration.
  */
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
