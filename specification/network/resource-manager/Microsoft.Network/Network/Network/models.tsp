@@ -8,6 +8,7 @@ using TypeSpec.Http;
 using Azure.ResourceManager;
 using Azure.Core;
 using Azure.ResourceManager.Foundations;
+using TypeSpec.Versioning;
 
 namespace Microsoft.Network;
 
@@ -21878,6 +21879,7 @@ model ConnectionMonitorEndpointLocationDetails {
  * Parameters that define the query for connection monitors.
  */
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+@added(Versions.v2025_07_01)
 @Azure.ResourceManager.Legacy.feature(Features.networkWatcher)
 model ConnectionMonitorsQueryParameters {
   /**
@@ -21901,6 +21903,7 @@ model ConnectionMonitorsQueryParameters {
  * List of connection monitor query result items.
  */
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+@added(Versions.v2025_07_01)
 @Azure.ResourceManager.Legacy.feature(Features.networkWatcher)
 model ConnectionMonitorsQueryResult {
   /**
@@ -21914,6 +21917,7 @@ model ConnectionMonitorsQueryResult {
  * A connection monitor query result item.
  */
 #suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+@added(Versions.v2025_07_01)
 @Azure.ResourceManager.Legacy.feature(Features.networkWatcher)
 model ConnectionMonitorsQueryResultItem {
   /**

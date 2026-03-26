@@ -8,6 +8,7 @@ using TypeSpec.Rest;
 using Azure.ResourceManager;
 using TypeSpec.Http;
 using TypeSpec.OpenAPI;
+using TypeSpec.Versioning;
 
 namespace Microsoft.Network;
 /**
@@ -353,6 +354,7 @@ interface NetworkWatchers {
    * Queries connection monitors for the specified resources under a network watcher.
    */
   #suppress "@azure-tools/typespec-azure-resource-manager/no-response-body" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+  @added(Versions.v2025_07_01)
   @tag("ConnectionMonitors")
   @autoRoute
   @action("queryConnectionMonitors")
