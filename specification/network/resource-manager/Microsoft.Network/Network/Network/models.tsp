@@ -21885,7 +21885,6 @@ model ConnectionMonitorsQueryParameters {
   /**
    * The list of VMs or VNets resource IDs to query.
    */
-  @encodedName("application/json", "resourceIDs")
   resourceIds: string[];
 
   /**

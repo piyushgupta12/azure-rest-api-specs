@@ -2979,13 +2979,12 @@
       "type": "object",
       "description": "Parameters that define the query for connection monitors.",
       "properties": {
-        "resourceIDs": {
+        "resourceIds": {
           "type": "array",
           "description": "The list of VMs or VNets resource IDs to query.",
           "items": {
             "type": "string"
-          },
-          "x-ms-client-name": "resourceIds"
+          }
         },
         "pollTimeInHours": {
           "type": "integer",
@@ -2998,7 +2997,7 @@
         }
       },
       "required": [
-        "resourceIDs"
+        "resourceIds"
       ]
     },
     "ConnectionMonitorsQueryResult": {
