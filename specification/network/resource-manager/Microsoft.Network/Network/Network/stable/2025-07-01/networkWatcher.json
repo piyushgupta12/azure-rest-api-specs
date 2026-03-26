@@ -46,10 +46,10 @@
       "name": "TrafficAnalytics"
     },
     {
-      "name": "ConnectionMonitors"
+      "name": "PacketCaptures"
     },
     {
-      "name": "PacketCaptures"
+      "name": "ConnectionMonitors"
     },
     {
       "name": "FlowLogs"
